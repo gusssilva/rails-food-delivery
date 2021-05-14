@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
-gem 'ransack'
+gem 'ransack' #for search queries
 gem 'rack-cors'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
