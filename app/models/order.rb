@@ -5,7 +5,7 @@ class Order < ApplicationRecord
   validates :name, :phone_number, :total_value, :city, :neighborhood, :street, :number, presence: true
 
   enum status: { waiting: 0, delivered: 1 }
-  before_validations :set_price
+  before_validation :set_price
   accepts_nested_attributes_for :order_products, allow_destroy: true
 
   private

@@ -23,10 +23,11 @@ class RestaurantsController < ApplicationController
 
   def fitler_by_city
     @restaurants = @restaurants.where(city: params[:city])
+  end
 
   def filter_by_category
     @restaurants = @restaurants.select do |restaurant|
-       restaurant.category.title == params[:category]
+      restaurant.category.title == params[:category]
     end
   end
 end
